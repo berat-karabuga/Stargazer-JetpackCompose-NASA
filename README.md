@@ -115,7 +115,7 @@
 | Daily Cosmos (Home) | Commander Profile|
 |:---:|:---:|
 | <img src="screenshots/dark_theme_home_screen.png" width="250" /> | <img src="screenshots/dark_theme_profile_screen.png" width="250" /> | 
-| *Deep Space View* | *Commander Profile* | 
+| *Deep Space View* | *Stats & Badge Collection* | 
 </div>
 
 ---
