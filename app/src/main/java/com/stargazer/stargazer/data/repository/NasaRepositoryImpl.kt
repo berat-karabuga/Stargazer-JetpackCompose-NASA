@@ -18,10 +18,10 @@ class NasaRepositoryImpl @Inject constructor(
             if (response.isSuccessful && response.body() != null) {
                 Resource.Success(response.body()!!)
             } else {
-                Resource.Error(response.message() ?: "Bir hata oluştu")
+                Resource.Error(response.message() ?: "An error occurred")
             }
         } catch (e: Exception) {
-            Resource.Error("İnternet bağlantını kontrol et: ${e.localizedMessage}")
+            Resource.Error("Check your internet connection: ${e.localizedMessage}")
         }
     }
 }

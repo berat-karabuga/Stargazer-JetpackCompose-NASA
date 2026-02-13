@@ -24,23 +24,35 @@ class AuthRepositoryImpl @Inject constructor(
             if (result.user != null) {
                 Resource.Success(result.user!!)
             } else {
-                Resource.Error("Kullanıcı bulunamadı")
+                Resource.Error("User not found")
             }
         } catch (e: Exception) {
-            Resource.Error(e.localizedMessage ?: "Bilinmeyen bir hata oluştu")
+            Resource.Error(e.localizedMessage ?: "An unknown error occurred")
         }
     }
 
-    override suspend fun register(email: String, pass: String): Resource<FirebaseUser> {
+
+    override suspend fun register(email: String, pass: String, username: String): Resource<FirebaseUser> {
         return try {
             val result = firebaseAuth.createUserWithEmailAndPassword(email, pass).await()
+
             if (result.user != null) {
+                val uid = result.user!!.uid
+                val newUser = UserStats(
+                    email = email,
+                    username = username,
+                    streak = 1,
+                    lastLoginDate = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ISO_DATE),
+                    maxStreak = 1
+                )
+                firestore.collection("users").document(uid).set(newUser).await()
+
                 Resource.Success(result.user!!)
             } else {
-                Resource.Error("Kayıt olunamadı")
+                Resource.Error("Registration failed")
             }
         } catch (e: Exception) {
-            Resource.Error(e.localizedMessage ?: "Kayıt sırasında hata oluştu")
+            Resource.Error(e.localizedMessage ?: "An error occurred during registration")
         }
     }
 
@@ -59,10 +71,10 @@ class AuthRepositoryImpl @Inject constructor(
             if (stats != null) {
                 Resource.Success(stats)
             } else {
-                Resource.Error("Kullanıcı verisi bulunamadı")
+                Resource.Error("User data not found")
             }
         } catch (e: Exception) {
-            Resource.Error(e.localizedMessage ?: "Veri çekilemedi")
+            Resource.Error(e.localizedMessage ?: "Failed to retrieve data")
         }
     }
 
@@ -113,7 +125,7 @@ class AuthRepositoryImpl @Inject constructor(
             Resource.Success(currentStats)
 
         } catch (e: Exception) {
-            Resource.Error("Streak güncellenemedi: ${e.localizedMessage}")
+            Resource.Error("Streak could not be updated: ${e.localizedMessage}")
         }
     }
 
