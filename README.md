@@ -10,6 +10,7 @@
 [![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=jetpack-compose&logoColor=white)](https://developer.android.com/jetpack/compose)
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![NASA API](https://img.shields.io/badge/NASA-E03C31?style=for-the-badge&logo=nasa&logoColor=white)](https://api.nasa.gov/)
+[![Figma](https://img.shields.io/badge/Design-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/71lNuTZIfBhuHs4Pam4gNc/Stargazer-icon-design?node-id=0-1&t=80eDGinOfMw7Rgkl-1)
 
 <img src="https://img.shields.io/github/stars/berat-karabuga/Stargazer-JetpackCompose-NASA?style=social" alt="stars"/>
 <img src="https://img.shields.io/github/forks/berat-karabuga/Stargazer-JetpackCompose-NASA?style=social" alt="forks"/>
@@ -493,16 +494,16 @@ graph LR
 
 ### 📜 **Complete Badge Breakdown**
 
-| Rank | Icon | Days | Title | Description | Unlock Message |
-|------|------|------|-------|-------------|----------------|
-| 1 | 🔭 | 1 | **Observer** | Entry-level astronomer | "For taking the first step into the void and looking up with curiosity" |
-| 2 | 🌍 | 7 | **Explorer** | Week-long commitment | "A week of relentless curiosity and stability" |
-| 3 | 🗺️ | 14 | **Pathfinder** | Two-week veteran | "The determination to discover new paths in the cosmos" |
-| 4 | ⚔️ | 30 | **Vanguard** | Monthly achiever | "A month of unwavering discipline and pioneering spirit" |
-| 5 | 🛡️ | 60 | **Centurion** | Two-month dedication | "Two months of experience and loyalty to the space corps" |
-| 6 | 👑 | 90 | **Commander** | Seasonal master | "Leadership and wisdom demonstrated over a full season" |
-| 7 | ⭐ | 180 | **Celestial** | Half-year legend | "A legendary half-year journey and celestial knowledge" |
-| 8 | 🚀 | 365 | **Voyager** | Annual elite | "Mastering the infinity journey over a complete solar cycle" |
+| Rank | Insignia | Days | Title | Description | Unlock Message |
+|:---:|:---:|:---:|:---|:---|:---|
+| 1 | <img src="screenshots/badge_observer.png" width="50"/> | 1 | **Observer** | Entry-level astronomer | "For taking the first step into the void and looking up with curiosity" |
+| 2 | <img src="screenshots/badge_explorer.png" width="50"/> | 7 | **Explorer** | Week-long commitment | "A week of relentless curiosity and stability" |
+| 3 | <img src="screenshots/badge_pathfinder.png" width="50"/> | 14 | **Pathfinder** | Two-week veteran | "The determination to discover new paths in the cosmos" |
+| 4 | <img src="screenshots/badge_vanguard.png" width="50"/> | 30 | **Vanguard** | Monthly achiever | "A month of unwavering discipline and pioneering spirit" |
+| 5 | <img src="screenshots/badge_centurion.png" width="50"/> | 60 | **Centurion** | Two-month dedication | "Two months of experience and loyalty to the space corps" |
+| 6 | <img src="screenshots/badge_commander.png" width="50"/> | 90 | **Commander** | Seasonal master | "Leadership and wisdom demonstrated over a full season" |
+| 7 | <img src="screenshots/badge_celestial.png" width="50"/> | 180 | **Celestial** | Half-year legend | "A legendary half-year journey and celestial knowledge" |
+| 8 | <img src="screenshots/badge_voyager.png" width="50"/> | 365 | **Voyager** | Annual elite | "Mastering the infinity journey over a complete solar cycle" |
 
 ### ⚙️ **Streak Calculation Logic**
 
